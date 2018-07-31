@@ -1,0 +1,7 @@
+[
+  {"id": 1, "nome": "JavaScript",  "categoria": "Desenvolvimento", "cargaHoraria": 20, "thumbnail":  "assets/img/typescript.jpg", "dataCurso": "30 Abr"},
+  {"id": 2, "nome": "TypeScript",  "categoria": "Desenvolvimento", "cargaHoraria": 40, "thumbnail":  "assets/img/typescript.jpg", "dataCurso": "20 Abr"},
+  {"id": 3, "nome": "Angular", "categoria": "Desenvolvimento", "cargaHoraria": 60, "thumbnail":  "assets/img/javascript.jpg", "dataCurso": "10 Abr"},
+  {"id": 4, "nome": "React.js",  "categoria": "Desenvolvimento", "cargaHoraria": 20, "thumbnail":  "assets/img/typescript.jpg", "dataCurso": "02 Abr"},
+  {"id": 4, "nome": "Angular Avançado",  "categoria": "Desenvolvimento", "cargaHoraria": 20, "thumbnail":  "assets/img/typescript.jpg", "dataCurso": "02 Abr"}
+]

@@ -1,0 +1,11 @@
+<article class="course presencial">
+  <div class="card">
+      <img class="responsive-img" [src]="curso.thumbnail">
+      <div class="card-block">
+          <time class="card-date">{{curso.dataCurso}}</time>
+          <h4 class="card-title">{{curso.nome}}</h4>
+          <p class="card-text">{{curso.cargaHoraria}}h de curso - {{curso.categoria}}</p>
+          <button (click)="voltar()" class="btn">voltar</button>
+      </div>
+  </div>
+</article>

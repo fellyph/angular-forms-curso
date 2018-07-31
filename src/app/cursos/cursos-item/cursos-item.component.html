@@ -1,0 +1,13 @@
+<article class="course presencial">
+  <div class="card">
+      <img class="responsive-img" [src]="curso.thumbnail">
+      <div class="card-block">
+          <time class="card-date">{{curso.dataCurso}}</time>
+          <h4 class="card-title"><a routerLink="/curso/{{curso.id}}">{{curso.nome}}</a></h4>
+          <p class="card-text">{{curso.cargaHoraria}}h de curso - {{curso.categoria}}</p>
+          <button (click)="favoritar()" class="btn btn-like">Favoritar</button>
+          <button (click)="curtir()" class="btn btn-like">likes {{counter}}</button>
+          <ng-content></ng-content>
+      </div>
+  </div>
+</article>
