@@ -13,12 +13,13 @@ import { NotFoundComponent } from './not-found/not-found.component';
 import { AppRoutingModule } from './/app-routing.module';
 import { CursoDetalheComponent } from './cursos/curso-detalhe/curso-detalhe.component';
 import { HttpClientModule } from '@angular/common/http';
+import { InscricaoComponent } from './inscricao/inscricao.component';
 
 @NgModule({
   declarations: [AppComponent, CursosComponent,
     CursosListaComponent, CursosItemComponent,
     SobreComponent, MainComponent, NavigationComponent,
-    NotFoundComponent, CursoDetalheComponent],
+    NotFoundComponent, CursoDetalheComponent, InscricaoComponent],
   imports: [
     BrowserModule,
     FormsModule,

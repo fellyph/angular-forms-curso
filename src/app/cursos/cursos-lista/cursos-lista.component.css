@@ -1,0 +1,11 @@
+.list-curso {
+  display: grid;
+  grid-column-gap: 20px;
+  grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+}
+
+.list-title {
+  text-align: center;
+  font-size: 2em;
+  margin: 1em 0;
+}

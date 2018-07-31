@@ -4,6 +4,7 @@ import { CursosComponent } from './cursos/cursos.component';
 import { SobreComponent } from './sobre/sobre.component';
 import { NotFoundComponent } from './not-found/not-found.component';
 import { CursoDetalheComponent } from './cursos/curso-detalhe/curso-detalhe.component';
+import { InscricaoComponent } from './inscricao/inscricao.component';
 
 const appRoutes: Routes = [
   { path: 'cursos', component: CursosComponent},
@@ -13,6 +14,7 @@ const appRoutes: Routes = [
   },
   { path: 'curso/:id', component: CursoDetalheComponent },
   { path: 'sobre', component: SobreComponent},
+  { path: 'inscricao', component: InscricaoComponent},
   { path: '**', component: NotFoundComponent}
 ];
 

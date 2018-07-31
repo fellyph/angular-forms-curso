@@ -1,13 +1,15 @@
 .main-nav {
-  background: #d1d1d1;
+  background: #EE4B6A;
   padding: 0.5em;
   margin: 0;
   list-style: none;
+  text-align: center;
 }
 
 .main-nav li {
   margin: 1.5em;
   text-align: center;
+  display: inline-block;
 }
 
 .main-nav a {
@@ -18,5 +20,5 @@
 }
 
 .main-nav a.current {
-  color:#DF2E2D;
+  color:#FEB95F;
 }

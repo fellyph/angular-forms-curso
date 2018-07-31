@@ -5,8 +5,9 @@
           <time class="card-date">{{curso.dataCurso}}</time>
           <h4 class="card-title"><a routerLink="/curso/{{curso.id}}">{{curso.nome}}</a></h4>
           <p class="card-text">{{curso.cargaHoraria}}h de curso - {{curso.categoria}}</p>
-          <button (click)="favoritar()" class="btn btn-like">Favoritar</button>
-          <button (click)="curtir()" class="btn btn-like">likes {{counter}}</button>
+          <p class="card-actions">
+            <button class="btn">inscrever-se</button>
+          </p>
           <ng-content></ng-content>
       </div>
   </div>
