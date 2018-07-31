@@ -27,7 +27,7 @@
               "node_modules/bootstrap/dist/css/bootstrap.min.css"
             ],
             "scripts": [
-              "curso-angular-forms/node_modules/jquery/dist/jquery.min.js",
+              "node_modules/jquery/dist/jquery.min.js",
               "node_modules/popper.js/dist/popper.min.js"
             ]
           },
