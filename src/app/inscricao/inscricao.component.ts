@@ -8,7 +8,8 @@ import { Component, OnInit } from '@angular/core';
 export class InscricaoComponent implements OnInit {
   public mensagem = '';
 
-  constructor() { }
+  constructor() {
+  }
 
   ngOnInit() {
   }
