@@ -59,6 +59,11 @@
         placeholder="Digite seu e-mail" />
   </div>
 
+  <div class="form-check">
+    <input type="checkbox" class="form-check-input" name="newsletter" [(ngModel)]="aluno.newsletter">
+    <label class="form-check-label">Quero me cadastrar na newsletter</label>
+  </div>
+
   <h4>Qual curso deseja cursar?</h4>
   <div class="form-group">
     <select class="form-control" id="curso">

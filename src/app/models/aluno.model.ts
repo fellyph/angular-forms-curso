@@ -6,6 +6,7 @@ export class Aluno {
   public cidade: String;
   public estado: String;
   public email: String;
+  public newsletter = false;
 
   constructor( nome: String, sobrenome: String, profissao: String , cidade: String, estado: String , email: String ) {
     this.nome = nome;

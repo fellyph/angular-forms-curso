@@ -12,7 +12,7 @@ export class InscricaoComponent implements OnInit {
   public aluno: Aluno;
 
   constructor() {
-    this.aluno = new Aluno('Fellyph', 'cintra', 'desenvolvedor', 'Caruaru', 'Pernambuco', 'fellyph@imedia.com.br');
+    this.aluno = new Aluno('Fellyph', 'Cintra', 'desenvolvedor', 'Caruaru', 'Pernambuco', 'fellyph@imedia.com.br');
   }
 
   ngOnInit() {
