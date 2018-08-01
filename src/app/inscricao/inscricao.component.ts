@@ -6,10 +6,14 @@ import { Component, OnInit } from '@angular/core';
   styleUrls: ['./inscricao.component.css']
 })
 export class InscricaoComponent implements OnInit {
+  public mensagem = '';
 
   constructor() { }
 
   ngOnInit() {
   }
 
+  salvar() {
+    this.mensagem = 'Salvando dados...';
+  }
 }
