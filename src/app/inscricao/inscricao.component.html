@@ -6,6 +6,7 @@
       <input type="text"
         class="form-control"
         name="nome"
+        [(ngModel)]="nome"
         placeholder="Digite seu nome"/>
     </div>
 
@@ -15,7 +16,8 @@
           class="form-control"
           placeholder="Digite seu sobrenome" />
     </div>
-    <small class="form-text text-muted col-12"></small>
+
+    <small class="form-text text-muted col-12">{{nome}}</small>
   </div>
 
   <div class="form-group">

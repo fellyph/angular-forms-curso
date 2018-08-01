@@ -7,6 +7,7 @@ import { Component, OnInit } from '@angular/core';
 })
 export class InscricaoComponent implements OnInit {
   public mensagem = '';
+  public nome: String;
 
   constructor() {
   }
@@ -16,5 +17,6 @@ export class InscricaoComponent implements OnInit {
 
   salvar() {
     this.mensagem = 'Salvando dados...';
+    this.nome = 'nome foi enviado';
   }
 }
