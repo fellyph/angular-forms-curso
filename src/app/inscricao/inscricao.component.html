@@ -96,7 +96,18 @@
 
   <h4>Qual curso deseja cursar?</h4>
   <div class="form-group">
-    <select class="form-control" id="curso" name="curso" [(ngModel)]="curso">
+      <label>Categoria</label>
+      <select class="form-control"
+              id="categoria" name="categoria" [(ngModel)]="categoria">
+        <option>Design</option>
+        <option>Desenvolvimento</option>
+      </select>
+  </div>
+
+  <div class="form-group">
+      <label>Curso</label>
+    <select class="form-control"
+            id="curso" name="curso" [(ngModel)]="curso">
       <option *ngFor="let curso of cursos" value="curso.id">{{curso.nome}}</option>
     </select>
   </div>
