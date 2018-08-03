@@ -13,6 +13,7 @@ export class InscricaoComponent implements OnInit {
   public aluno: Aluno;
   public curso: String;
   public cursos;
+  public cursosFiltrados;
 
   constructor(private cursosService: CursosService) {
     this.aluno = new Aluno('Fellyph', 'cintra', 'desenvolvedor', 'Caruaru', 'Pernambuco', 'fellyph@imedia.com.br');
@@ -27,6 +28,6 @@ export class InscricaoComponent implements OnInit {
   }
 
   filtrarCursos (event) {
-    alert('Chamou filtro: ' + event);
+    this.cursosFiltrados = this.cursos.filter( curso => curso.categoria === event);
   }
 }

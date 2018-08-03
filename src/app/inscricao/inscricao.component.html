@@ -106,11 +106,11 @@
       </select>
   </div>
 
-  <div class="form-group">
+  <div class="form-group" *ngIf="cursosFiltrados">
       <label>Curso</label>
     <select class="form-control"
             id="curso" name="curso" [(ngModel)]="curso">
-      <option *ngFor="let curso of cursos" value="curso.id">{{curso.nome}}</option>
+      <option *ngFor="let curso of cursosFiltrados" value="curso.id">{{curso.nome}}</option>
     </select>
   </div>
 
@@ -132,4 +132,5 @@
 
   <button type="submit" (click)="salvar()" class="btn btn-primary">Enviar</button>
   {{mensagem}}
+  {{cursosFiltrados | json }}
 </form>
