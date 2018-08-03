@@ -25,4 +25,8 @@ export class InscricaoComponent implements OnInit {
   salvar() {
     this.mensagem = 'Salvando dados...';
   }
+
+  filtrarCursos (event) {
+    alert('Chamou filtro: ' + event);
+  }
 }

@@ -98,7 +98,9 @@
   <div class="form-group">
       <label>Categoria</label>
       <select class="form-control"
-              id="categoria" name="categoria" [(ngModel)]="categoria">
+              id="categoria" name="categoria"
+              [ngModel]="categoria"
+              (ngModelChange)="filtrarCursos($event)">
         <option>Design</option>
         <option>Desenvolvimento</option>
       </select>
