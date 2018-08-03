@@ -7,6 +7,7 @@ export class Aluno {
   public estado: String;
   public email: String;
   public newsletter = false;
+  public tamanhoCamisa = 'M';
 
   constructor( nome: String, sobrenome: String, profissao: String , cidade: String, estado: String , email: String ) {
     this.nome = nome;

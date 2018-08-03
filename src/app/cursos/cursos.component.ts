@@ -13,7 +13,6 @@ export class CursosComponent implements OnInit {
   public dadosCurso;
   public dadosFavoritos;
   public tituloProx = 'Próximos cursos';
-  public tituloFav = 'Favoritos';
 
   totalLikes = 0;
 
@@ -21,10 +20,5 @@ export class CursosComponent implements OnInit {
 
   ngOnInit() {
     this.cursosService.getCursos().subscribe(dados => this.dadosCurso = dados);
-    this.cursosService.cursoCurtido.subscribe((curso: Curso) => { this.totalLikes++; });
-    this.cursosService.favoritarCurso.subscribe((curso: Curso) => {
-      this.favoritosService.add(curso);
-      this.dadosFavoritos = this.favoritosService.getMeusFavoritos();
-    });
   }
 }

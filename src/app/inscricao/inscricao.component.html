@@ -59,9 +59,39 @@
         placeholder="Digite seu e-mail" />
   </div>
 
-  <div class="form-check">
-    <input type="checkbox" class="form-check-input" name="newsletter" [(ngModel)]="aluno.newsletter">
-    <label class="form-check-label">Quero me cadastrar na newsletter</label>
+  <div class="form-group">
+    <div class="form-check">
+      <input type="checkbox" class="form-check-input" name="newsletter" [(ngModel)]="aluno.newsletter">
+      <label class="form-check-label">Quero me cadastrar na newsletter</label>
+    </div>
+  </div>
+
+  <div class="form-group">
+      <label>Tamanho da camisa</label>
+      <div class="form-check" id="formato">
+        <input type="radio" class="form-check-input"
+          name="tamanhoCamisa" value="P" id="P"
+          [(ngModel)]="aluno.tamanhoCamisa" />
+        <label for="P">
+          P
+        </label>
+      </div>
+      <div class="form-check">
+        <input type="radio" class="form-check-input"
+          name="tamanhoCamisa" value="M" id="M"
+          [(ngModel)]="aluno.tamanhoCamisa" />
+        <label for="M">
+          M
+        </label>
+      </div>
+      <div class="form-check">
+          <input type="radio" class="form-check-input"
+            name="tamanhoCamisa" value="G" id="G"
+            [(ngModel)]="aluno.tamanhoCamisa" />
+          <label for="G">
+            G
+          </label>
+        </div>
   </div>
 
   <h4>Qual curso deseja cursar?</h4>
@@ -91,5 +121,5 @@
 
   <button type="submit" (click)="salvar()" class="btn btn-primary">Enviar</button>
   {{mensagem}}
-
+  {{cursos | json}}
 </form>

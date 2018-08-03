@@ -1,5 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { Aluno } from '../models/aluno.model';
+import { CursosService } from '../services/cursos.service';
 
 @Component({
   selector: 'app-inscricao',
@@ -10,12 +11,14 @@ export class InscricaoComponent implements OnInit {
   public mensagem = '';
   public nome: String;
   public aluno: Aluno;
+  public cursos;
 
-  constructor() {
-    this.aluno = new Aluno('Fellyph', 'Cintra', 'desenvolvedor', 'Caruaru', 'Pernambuco', 'fellyph@imedia.com.br');
+  constructor(private cursosService: CursosService) {
+    this.aluno = new Aluno('Fellyph', 'cintra', 'desenvolvedor', 'Caruaru', 'Pernambuco', 'fellyph@imedia.com.br');
   }
 
   ngOnInit() {
+    this.cursosService.getCursos().subscribe(dados => this.cursos = dados);
   }
 
   salvar() {
