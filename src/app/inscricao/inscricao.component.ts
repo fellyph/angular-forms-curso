@@ -11,6 +11,7 @@ export class InscricaoComponent implements OnInit {
   public mensagem = '';
   public nome: String;
   public aluno: Aluno;
+  public curso: String;
   public cursos;
 
   constructor(private cursosService: CursosService) {

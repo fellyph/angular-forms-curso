@@ -96,10 +96,8 @@
 
   <h4>Qual curso deseja cursar?</h4>
   <div class="form-group">
-    <select class="form-control" id="curso">
-      <option>JavaScript</option>
-      <option>TypeScript</option>
-      <option>Angular 6</option>
+    <select class="form-control" id="curso" name="curso" [(ngModel)]="curso">
+      <option *ngFor="let curso of cursos" value="curso.id">{{curso.nome}}</option>
     </select>
   </div>
 
@@ -121,5 +119,4 @@
 
   <button type="submit" (click)="salvar()" class="btn btn-primary">Enviar</button>
   {{mensagem}}
-  {{cursos | json}}
 </form>
