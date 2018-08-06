@@ -1,3 +1,7 @@
 .form-inscricao {
   padding: 1em;
 }
+
+.form-control.ng-invalid {
+  border: 2px solid red;
+}
