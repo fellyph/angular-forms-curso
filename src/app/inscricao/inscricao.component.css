@@ -2,6 +2,6 @@
   padding: 1em;
 }
 
-.form-control.ng-invalid {
+.form-control.ng-invalid.ng-dirty {
   border: 2px solid red;
 }

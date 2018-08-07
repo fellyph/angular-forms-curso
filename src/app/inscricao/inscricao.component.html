@@ -4,10 +4,10 @@
     <div class="form-group col-6">
       <label for="nome">Nome*</label>
       <input type="text"
-        #nomeAluno
+        #nomeAluno="ngModel"
         class="form-control"
         name="nome"
-        [(ngModel)]="aluno.nome"
+        [(ngModel)]="nome"
         placeholder="Digite seu nome" required/>
     </div>
 
@@ -20,7 +20,8 @@
           placeholder="Digite seu sobrenome" />
     </div>
 
-    <small class="form-text text-muted col-12">{{nomeAluno.className}}</small>
+    <div class="alert alert-danger col-12"
+        *ngIf="nomeAluno.invalid && nomeAluno.touched">Nome do aluno é obrigatório</div>
   </div>
 
   <div class="form-group">
@@ -57,7 +58,7 @@
         class="form-control"
         name="email"
         [(ngModel)]="aluno.email"
-        placeholder="Digite seu e-mail" />
+        placeholder="Digite seu e-mail" required />
   </div>
 
   <div class="form-group">
