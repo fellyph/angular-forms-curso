@@ -12,6 +12,8 @@ export class InscricaoComponent implements OnInit {
   public nome: String;
   public aluno: Aluno;
   public curso: String;
+  public idade: Number;
+  public idadeInvalida: Boolean = false;
   public cursos;
   public cursosFiltrados;
 
@@ -29,5 +31,15 @@ export class InscricaoComponent implements OnInit {
 
   filtrarCursos (event) {
     this.cursosFiltrados = this.cursos.filter( curso => curso.categoria === event);
+  }
+
+  validarIdade(event) {
+    if (event >= 12 && event <= 120) {
+      alert('valid');
+      this.idadeInvalida = false;
+    } else {
+      alert('invalid');
+      this.idadeInvalida = true;
+    }
   }
 }
