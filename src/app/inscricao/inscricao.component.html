@@ -6,12 +6,10 @@
       <input
         #nomeAluno="ngModel"
         class="form-control"
-        minlength="2"
-        maxlength="20"
+        pattern="[A-Za-z]{2,20}"
         name="nome"
         [(ngModel)]="aluno.nome"
         placeholder="Digite seu nome" required>
-        {{nomeAluno.errors | json}}
     </div>
 
     <div class="form-group col-6">
@@ -49,7 +47,9 @@
     </div>
     <div class="form-group col-3">
         <label for="estado">Estado</label>
-        <input type="text"
+        <input
+            maxlength="2"
+            pattern="[A-Z]{2}"
             class="form-control"
             [(ngModel)]="aluno.estado"
             name="estado"

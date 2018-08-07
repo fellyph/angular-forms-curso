@@ -18,7 +18,7 @@ export class InscricaoComponent implements OnInit {
   public cursosFiltrados;
 
   constructor(private cursosService: CursosService) {
-    this.aluno = new Aluno('Fellyph', 'cintra', 'desenvolvedor', 'Caruaru', 'Pernambuco', 'fellyph@imedia.com.br');
+    this.aluno = new Aluno('Fellyph', 'cintra', 'desenvolvedor', 'Caruaru', 'PE', 'fellyph@imedia.com.br');
   }
 
   ngOnInit() {
