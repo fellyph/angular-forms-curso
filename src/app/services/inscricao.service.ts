@@ -1,23 +1,27 @@
 import { Inscricao } from '../models/inscricao.model';
 import { Injectable } from '@angular/core';
-import { Aluno } from '../models/aluno.model';
 import { Observable } from 'rxjs';
-import { HttpClient } from '@angular/common/http';
+import { HttpClient, HttpHeaders } from '@angular/common/http';
 
 @Injectable({providedIn: 'root'})
 export class InscricaoService {
-  private inscricaoApiUrl = 'api/inscricoes';
+  private inscricoesApiUrl = 'api/inscricoes';
   private inscricoes: Inscricao[];
+  private httpOptions = {
+    headers: new HttpHeaders({ 'Content-Type' : 'application/json' })
+  };
 
-  constructor(private http: HttpClient) { }
+  constructor(private http: HttpClient) {}
 
   getInscricoes(): Observable<Inscricao[]> {
-    const request = this.http.get<Inscricao[]>(this.inscricaoApiUrl);
+    const request = this.http.get<Inscricao[]>(this.inscricoesApiUrl);
     request.subscribe(dados => this.inscricoes = dados);
     return request;
   }
 
-  adicionarInscricao(inscricao: Inscricao) {
-
+  adicionarInscricao(inscricao: Inscricao): Observable<Inscricao> {
+    const request = this.http.post<Inscricao>(this.inscricoesApiUrl, inscricao, this.httpOptions);
+    request.subscribe((item: Inscricao) => console.log(item));
+    return request;
   }
 }
