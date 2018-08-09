@@ -11,7 +11,7 @@ export class CursosService {
   public favoritarCurso = new EventEmitter<Curso>();
 
   private cursos: Curso[] = [];
-  private urlDados = 'assets/data/curso.json';
+  private urlDados = 'api/cursos';
   constructor(private http: HttpClient) { }
 
   public getCursos(): Observable<Curso[]> {

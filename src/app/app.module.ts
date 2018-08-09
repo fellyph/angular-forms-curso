@@ -14,6 +14,8 @@ import { AppRoutingModule } from './/app-routing.module';
 import { CursoDetalheComponent } from './cursos/curso-detalhe/curso-detalhe.component';
 import { HttpClientModule } from '@angular/common/http';
 import { InscricaoComponent } from './inscricao/inscricao.component';
+import { HttpClientInMemoryWebApiModule } from 'angular-in-memory-web-api';
+import { InMemoryWebApiService } from './services/in-memory-web-api.service';
 
 @NgModule({
   declarations: [AppComponent, CursosComponent,
@@ -24,7 +26,10 @@ import { InscricaoComponent } from './inscricao/inscricao.component';
     BrowserModule,
     FormsModule,
     AppRoutingModule,
-    HttpClientModule
+    HttpClientModule,
+    HttpClientInMemoryWebApiModule.forRoot(
+      InMemoryWebApiService, {dataEncapsulation: false}
+    )
   ],
   bootstrap: [AppComponent]
 })
