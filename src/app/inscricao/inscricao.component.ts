@@ -1,6 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import { Aluno } from '../models/aluno.model';
 import { CursosService } from '../services/cursos.service';
+import { InscricaoService } from '../services/inscricao.service';
 
 @Component({
   selector: 'app-inscricao',
@@ -16,13 +17,15 @@ export class InscricaoComponent implements OnInit {
   public idadeInvalida: Boolean = false;
   public cursos;
   public cursosFiltrados;
+  public inscricoes;
 
-  constructor(private cursosService: CursosService) {
+  constructor(private cursosService: CursosService, private inscricaoService: InscricaoService) {
     this.aluno = new Aluno('Fellyph', 'cintra', 'desenvolvedor', 'Caruaru', 'PE', 'fellyph@imedia.com.br');
   }
 
   ngOnInit() {
     this.cursosService.getCursos().subscribe(dados => this.cursos = dados);
+    this.inscricaoService.getInscricoes().subscribe(dadosApi => this.inscricoes = dadosApi);
   }
 
   salvar() {

@@ -15,7 +15,6 @@ export class InscricaoService {
 
   getInscricoes(): Observable<Inscricao[]> {
     const request = this.http.get<Inscricao[]>(this.inscricoesApiUrl);
-    request.subscribe(dados => this.inscricoes = dados);
     return request;
   }
 
