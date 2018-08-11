@@ -6,7 +6,6 @@ import { HttpClient, HttpHeaders } from '@angular/common/http';
 @Injectable({providedIn: 'root'})
 export class InscricaoService {
   private inscricoesApiUrl = 'api/inscricoes';
-  private inscricoes: Inscricao[];
   private httpOptions = {
     headers: new HttpHeaders({ 'Content-Type' : 'application/json' })
   };
@@ -20,7 +19,6 @@ export class InscricaoService {
 
   adicionarInscricao(inscricao: Inscricao): Observable<Inscricao> {
     const request = this.http.post<Inscricao>(this.inscricoesApiUrl, inscricao, this.httpOptions);
-    request.subscribe((item: Inscricao) => console.log(item));
     return request;
   }
 }

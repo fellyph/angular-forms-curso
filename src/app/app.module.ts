@@ -5,7 +5,6 @@ import { AppComponent } from './app.component';
 import { CursosComponent } from './cursos/cursos.component';
 import { CursosListaComponent } from './cursos/cursos-lista/cursos-lista.component';
 import { CursosItemComponent } from './cursos/cursos-item/cursos-item.component';
-import { Routes, RouterModule } from '@angular/router';
 import { SobreComponent } from './sobre/sobre.component';
 import { MainComponent } from './main/main.component';
 import { NavigationComponent } from './main/navigation/navigation.component';
