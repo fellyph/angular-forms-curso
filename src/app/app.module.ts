@@ -15,15 +15,18 @@ import { HttpClientModule } from '@angular/common/http';
 import { InscricaoComponent } from './inscricao/inscricao.component';
 import { HttpClientInMemoryWebApiModule } from 'angular-in-memory-web-api';
 import { InMemoryWebApiService } from './services/in-memory-web-api.service';
+import { AlunoComponent } from './aluno/aluno.component';
+import { ReactiveFormsModule } from '@angular/forms';
 
 @NgModule({
   declarations: [AppComponent, CursosComponent,
     CursosListaComponent, CursosItemComponent,
     SobreComponent, MainComponent, NavigationComponent,
-    NotFoundComponent, CursoDetalheComponent, InscricaoComponent],
+    NotFoundComponent, CursoDetalheComponent, InscricaoComponent, AlunoComponent],
   imports: [
     BrowserModule,
     FormsModule,
+    ReactiveFormsModule,
     AppRoutingModule,
     HttpClientModule,
     HttpClientInMemoryWebApiModule.forRoot(

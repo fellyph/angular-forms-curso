@@ -1,0 +1,75 @@
+<form #inscricaoForm="ngForm" class="form-aluno" (submit)="salvar(inscricaoForm)">
+  <h4>Cadastro de aluno</h4>
+  <div class="form-row">
+    <div class="form-group col-6">
+      <label for="nome">Nome*</label>
+      <input
+      #nomeAluno="ngModel"
+      class="form-control"
+      pattern="[A-Za-z]{2,20}"
+      name="nome"
+      [(ngModel)]="aluno.nome"
+      placeholder="Digite seu nome" required>
+    </div>
+
+    <div class="form-group col-6">
+      <label for="sobrenome">Sobrenome</label>
+      <input type="text"
+      class="form-control"
+      name="sobrenome"
+      [(ngModel)]="aluno.sobrenome"
+      placeholder="Digite seu sobrenome" required>
+    </div>
+
+    <div class="alert alert-danger col-12" *ngIf="nomeAluno.invalid && nomeAluno.touched">
+        <span *ngIf="nomeAluno.errors.required">Nome do aluno é obrigatório</span>
+        <span *ngIf="nomeAluno.errors.minlength">Nome nao possui a quantidade minima</span>
+    </div>
+  </div>
+
+  <div class="form-group">
+    <label for="profissao">Profissão</label>
+    <input type="text"
+    class="form-control"
+    name="profissao"
+    [(ngModel)]="aluno.profissao"
+    placeholder="Digite sua Profissão">
+  </div>
+
+  <div class="form-row">
+    <div class="form-group col-9">
+      <label for="cidade">Cidade</label>
+      <input type="text"
+      class="form-control"
+      name="cidade"
+      [(ngModel)]="aluno.cidade"
+      placeholder="Digite sua Cidade" />
+    </div>
+    <div class="form-group col-3">
+      <label for="estado">Estado</label>
+      <input
+      maxlength="2"
+      pattern="[A-Z]{2}"
+      class="form-control"
+      [(ngModel)]="aluno.estado"
+      name="estado"
+      placeholder="UF" />
+    </div>
+  </div>
+  <div class="form-row">
+    <div class="form-group col-9">
+      <label for="email">E-mail</label>
+      <input type="email"
+      class="form-control"
+      name="email"
+      [(ngModel)]="aluno.email"
+      placeholder="Digite seu e-mail" required>
+    </div>
+  </div>
+  <div class="form-group">
+    <div class="form-check">
+      <input type="checkbox" class="form-check-input" name="newsletter" [(ngModel)]="aluno.newsletter">
+      <label class="form-check-label">Quero me cadastrar na newsletter</label>
+    </div>
+  </div>
+</form>
