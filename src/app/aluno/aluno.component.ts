@@ -1,5 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { Aluno } from '../models/aluno.model';
+import { FormGroup , FormControl } from '@angular/forms';
 
 @Component({
   selector: 'app-aluno',
@@ -8,10 +9,22 @@ import { Aluno } from '../models/aluno.model';
 })
 export class AlunoComponent implements OnInit {
   public aluno: Aluno;
+  public alunoForm: FormGroup;
 
   constructor() {
-    this.aluno = new Aluno('', '', '', '', '', '');
   }
-  ngOnInit() { }
+  ngOnInit() {
+    this.aluno = new Aluno('', '', '', '', '', '');
+    this.alunoForm = new FormGroup({
+      nome: new FormControl(),
+      sobrenome: new FormControl(),
+      profissao: new FormControl(),
+      cidade: new FormControl(),
+      estado: new FormControl(),
+      email: new FormControl()
+    });
+
+
+  }
 
 }
